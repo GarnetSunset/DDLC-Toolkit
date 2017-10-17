@@ -3,5 +3,5 @@
 	url = https://github.com/GarnetSunset/itch.io-downloader
 [submodule "unrpa"]
 	path = unrpa
-	url = https://github.com/Lattyware/unrpa
+	url = https://github.com/GarnetSunset/unrpa
 	branch = master
