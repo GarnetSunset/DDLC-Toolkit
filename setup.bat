@@ -4,3 +4,4 @@ python "itchDownload.py" %*
 python "cleanOld.py"
 cd ..
 python grabGame.py
+python extractAllRPAs.py
