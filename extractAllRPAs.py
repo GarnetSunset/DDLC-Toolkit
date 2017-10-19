@@ -14,12 +14,5 @@ if os.path.exists(owd + "/DDLC/game/audio.rpa"):
     os.rename(owd + "/DDLC/game/images.rpa",owd + "/DDLC/game/imagesBKP.rpa")
     os.system(unrpaDir + " " + owd + "/DDLC/game/scripts.rpa")
     os.rename(owd + "/DDLC/game/scripts.rpa",owd + "/DDLC/game/scriptsBKP.rpa")
-    for filename in os.listdir("."):
-        if filename.startswith("game_00"):
-            so.remove(filename)
-        if filename.startswith("game_"):
-            newName = re.sub('game_', '', filename)
-            newName = re.sub('.txt', '', newName)
-            shutil.move(owd + "/DDLC/game/" + filename, owd + "/DDLC/game/" + newName)
 else:
     print("Already Extracted Nerd!")
