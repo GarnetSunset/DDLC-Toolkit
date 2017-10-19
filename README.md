@@ -7,6 +7,10 @@ Chrome is required, or you can retool it for firefox, but I'm a lazy bastard.
 
 Use the command "git clone --recursive https://github.com/GarnetSunset/DDLC-Toolkit" when cloning please!
 
+## Requirements
+
+Run requirements.bat to install the modules... more will be added later but for now only six is required.
+
 ## Running it.
 
 Setup.bat for your first time only, this will download a fresh DDLC and extract the scripts.
