@@ -20,7 +20,7 @@ def loading():
 
 owd = os.getcwd()
 
-response = urlopen('https://download837.mediafire.com/fx6cai2u5xxg/471gl4z7mw0w2un/ddlc-win.zip')
+response = urlopen('https://dl.dropbox.com/s/sodclriyw7jilp8/ddlc-win.zip?dl=1')
 
 g = threading.Thread(target=loading)
 g.start()
