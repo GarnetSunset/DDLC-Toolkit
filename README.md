@@ -9,7 +9,11 @@ Use the command "git clone --recursive https://github.com/GarnetSunset/DDLC-Tool
 
 ## Running it.
 
-Setup.bat for now. I'll add a couple steps to migrate your changes manually in the future. 
+Setup.bat for your first time only, this will download a fresh DDLC and extract the scripts.
+
+## Import your edits!
+
+Put all of your edits into the "edits" folder and they will be thrown into the game folder.
 
 Credits: 
 
