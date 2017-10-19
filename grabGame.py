@@ -1,11 +1,6 @@
 from distutils import dir_util
 from six.moves.urllib.request import urlopen
-import itertools
-import os
-import sys
-import threading
-import time
-import zipfile
+import itertools, os, sys, threading, time, zipfile
 
 done = False
 
