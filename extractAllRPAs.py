@@ -7,19 +7,13 @@ unrpaDir = owd + "/unrpa/unrpa.py"
 if os.path.exists(owd + "/DDLC/game/audio.rpa"):
     os.chdir(owd + "/DDLC/game/")
     os.system(unrpaDir + " " + owd + "/DDLC/game/audio.rpa")
-    os.remove(owd + "/DDLC/game/audio.rpa")
+    os.rename(owd + "/DDLC/game/audio.rpa",owd + "/DDLC/game/audioBKP.rpa")
     os.system(unrpaDir + " " + owd + "/DDLC/game/fonts.rpa")
-    os.remove(owd + "/DDLC/game/fonts.rpa")
+    os.rename(owd + "/DDLC/game/fonts.rpa",owd + "/DDLC/game/fontsBKP.rpa")
     os.system(unrpaDir + " " + owd + "/DDLC/game/images.rpa")
-    os.remove(owd + "/DDLC/game/images.rpa")
+    os.rename(owd + "/DDLC/game/images.rpa",owd + "/DDLC/game/imagesBKP.rpa")
     os.system(unrpaDir + " " + owd + "/DDLC/game/scripts.rpa")
-    os.remove(owd + "/DDLC/game/scripts.rpa")
-    response = urlopen('https://raw.githubusercontent.com/lolbot-iichan/decompile.rpy/master/decompile.rpy')
-    with open("decompile.rpy", "w") as file:
-        file.write(response.read())
-    os.system(owd + "/DDLC/DDLC.exe")
-    time.sleep(10)
-    os.system("taskkill /im DDLC.exe")
+    os.rename(owd + "/DDLC/game/scripts.rpa",owd + "/DDLC/game/scriptsBKP.rpa")
     for filename in os.listdir("."):
         if filename.startswith("game_00"):
             so.remove(filename)

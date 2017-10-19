@@ -1,35 +1,47 @@
 from distutils import dir_util
+from six.moves.urllib.request import urlopen
+import itertools
 import os
 import sys
+import threading
+import time
+import zipfile
+
+done = False
+
+if os.path.isfile("DDLC.zip"):
+    os.remove("DDLC.zip")
+
+if os.path.isdir("/DDLC/"):
+    dir_util.remove_tree("/DDLC/")
+
+def loading():
+    for s in itertools.cycle(['|', '/', '-', '\\']):
+        if done:
+            break
+        sys.stdout.write('\rDownloading... ' + s)
+        sys.stdout.flush()
+        time.sleep(0.1)
 
 owd = os.getcwd()
 
-directory_list = list()
-for root, dirs, files in os.walk(owd+"/itch.io-downloader", topdown=False):
-    for name in dirs:
-        if "DDLC" in name:
-            directory_list.append(name)
-DDLCDir = ''.join(directory_list)
-VersionStart = DDLCDir.index("DDLC")
-VersionEnd = DDLCDir.index("pc")
+response = urlopen('https://download837.mediafire.com/fx6cai2u5xxg/471gl4z7mw0w2un/ddlc-win.zip')
 
-DDLCVer = DDLCDir[VersionStart+5:VersionEnd-1]
+g = threading.Thread(target=loading)
+g.start()
 
-if not os.path.isfile("DDLCModVer.ini"):
-    modVer = open("DDLCModVer.ini", "w")
-    modVer.write(DDLCVer)
-    modVer.close()
-else:
-    with open("DDLCModVer.ini", 'r') as myfile:
-        listVer = myfile.readlines()
-        CurVer = ''.join(listVer)
-        if CurVer != DDLCVer:
-            print("Time To Check The Diffs!")
-            modVer = open("DDLCModVer.ini", "w")
-            modVer.write(CurVer)
-            modVer.close()
-        else:
-            print("You're up to date!")
+f = open("DDLC.zip", 'wb')
+f.write(response.read())
+f.close()
 
-dir_util.copy_tree(owd+"/itch.io-downloader/"+DDLCDir,owd+"/DDLC")
-dir_util.remove_tree(owd+"/itch.io-downloader/"+DDLCDir)
+done = True
+print("\nDone DLing... Moving on...")
+
+ddlczip = zipfile.ZipFile("DDLC.zip", 'r')
+ddlczip.extractall(owd)
+ddlczip.close()
+
+dir_util.copy_tree(owd+"/DDLC-1.0.9-pc/",owd+"/DDLC/")
+dir_util.remove_tree(owd+"/DDLC-1.0.9-pc/")
+
+os.remove("DDLC.zip")
