@@ -1,13 +1,9 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
-
-# C extensions
-*.so
 /DDLC
+/DDLCModded
 /DDLC-1.0.9-pc
 DDLC.zip
+/edits
+
 # Distribution / packaging
 .Python
 env/
