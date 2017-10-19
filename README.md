@@ -15,7 +15,9 @@ Setup.bat for your first time only, this will download a fresh DDLC and extract 
 
 Put all of your edits into the "edits" folder and they will be thrown into the game folder.
 
-Credits: 
+Run "mergeChanges.py"!
+
+Credits:
 
 - Dan Salvato for DDLC
 - Lattyware for unrpa
