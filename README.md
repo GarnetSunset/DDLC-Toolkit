@@ -11,6 +11,10 @@ Use the command "git clone --recursive https://github.com/GarnetSunset/DDLC-Tool
 
 Run requirements.bat to install the modules... more will be added later but for now only six is required.
 
+## Template
+
+@therationalpi made a template for mods, that I've added as a submodule for this mod. Excellent work pi!
+
 ## Running it.
 
 Setup.bat for your first time only, this will download a fresh DDLC and extract the scripts.
@@ -25,3 +29,4 @@ Credits:
 
 - Dan Salvato for DDLC
 - Lattyware for unrpa
+- therationalpi for the sick template 

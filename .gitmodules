@@ -4,3 +4,7 @@
 [submodule "unrpa"]
 	path = unrpa
 	url = https://github.com/GarnetSunset/unrpa
+[submodule "DDLCModTemplate"]
+	path = DDLCModTemplate
+	url = https://github.com/therationalpi/DDLCModTemplate
+	branch = master
