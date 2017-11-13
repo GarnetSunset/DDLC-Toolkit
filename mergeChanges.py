@@ -14,4 +14,3 @@ if os.path.isdir(owd+"/edits/"):
 
 else:
     os.makedirs(owd+"/edits/")
-    print("Go Make some edits dummy!")
