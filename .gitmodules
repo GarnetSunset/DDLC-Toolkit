@@ -3,7 +3,7 @@
 	url = https://github.com/GarnetSunset/itch.io-downloader
 [submodule "unrpa"]
 	path = unrpa
-	url = https://github.com/GarnetSunset/unrpa
+	url = https://github.com/Lattyware/unrpa
 [submodule "DDLCModTemplate"]
 	path = DDLCModTemplate
 	url = https://github.com/therationalpi/DDLCModTemplate
