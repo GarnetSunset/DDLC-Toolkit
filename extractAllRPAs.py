@@ -1,8 +1,11 @@
 from six.moves.urllib.request import urlopen
-import glob, os, re, shutil, time
+import glob, os, re, shutil, sys, time
 
 owd = os.getcwd()
-unrpaDir = owd + "/unrpa/unrpa.py"
+if sys.version_info <= (3, 0):
+    unrpaDir = owd + "/unrpa2/unrpa.py"
+if sys.version_info >= (3, 0):
+    unrpaDir = owd + "/unrpa/unrpa.py"
 
 if os.path.exists(owd + "/DDLC/game/audio.rpa"):
     os.chdir(owd + "/DDLC/game/")
