@@ -8,3 +8,6 @@
 [submodule "unrpa2"]
 	path = unrpa2
 	url = https://github.com/GarnetSunset/unrpa2
+[submodule "unrpa"]
+	path = unrpa
+	url = https://github.com/Lattyware/unrpa
